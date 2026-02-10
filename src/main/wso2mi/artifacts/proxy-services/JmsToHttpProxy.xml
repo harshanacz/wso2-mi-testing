@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="JmsToHttpProxy" startOnLoad="true" transports="jms" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log category="INFO" logMessageID="false" logFullPayload="false">
+                <message>JMS Message Received!</message>
+            </log>
+        </inSequence>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.jms.Destination">OrderQueue</parameter>
+</proxy>
