@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transform" name="TransformAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/">
+        <inSequence>
+            <datamapper config="resources:datamapper/StudentMapping/StudentMapping.dmc" inputSchema="resources:datamapper/StudentMapping/StudentMapping_inputSchema.json" outputSchema="resources:datamapper/StudentMapping/StudentMapping_outputSchema.json"/>
+            <respond/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>
