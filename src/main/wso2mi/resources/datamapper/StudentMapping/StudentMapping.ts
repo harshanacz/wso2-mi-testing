@@ -22,8 +22,6 @@ interface OutputRoot {
     StudentAge: number
 }
 
-
-
 /**
  * functionName : map_S_root_S_root
  * inputVariable : inputroot
@@ -31,11 +29,6 @@ interface OutputRoot {
 export function mapFunction(input: Root): OutputRoot {
     return {
         StudentAge: input.student.age,
-        FullName: input.student.firstname + input.student.lastname
+        FullName: input.student.firstname + " " + input.student.lastname
     }
 }
-
-ut.student.age
-    }
-}
-
