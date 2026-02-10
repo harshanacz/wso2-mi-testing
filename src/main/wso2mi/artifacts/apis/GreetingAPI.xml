@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/greet" name="GreetingAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+    <resource methods="GET" uri-template="/{name}">
+        <inSequence>
+            <switch source="${get-property('uri.var.name')}">
+                <case regex="usa">
+                    <payloadFactory media-type="json" template-type="default">
+                        <format>u r usa</format>
+                    </payloadFactory>
+                    <respond/>
+                </case>
+                <default>
+                    <payloadFactory media-type="json" template-type="default">
+                        <format>u r not usa</format>
+                    </payloadFactory>
+                    <respond/>
+                </default>
+            </switch>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

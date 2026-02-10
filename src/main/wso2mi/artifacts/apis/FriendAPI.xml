@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/friend" name="FriendAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+    <resource methods="GET" uri-template="/{name}">
+        <inSequence>
+            <payloadFactory media-type="json" template-type="default">
+                <format>{"message": "Hello my friend!"}</format>
+            </payloadFactory>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>
