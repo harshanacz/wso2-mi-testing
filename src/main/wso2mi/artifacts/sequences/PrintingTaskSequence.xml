@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="PrintingTaskSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="INFO" logMessageID="false" logFullPayload="false">
+        <message>this is an automatic tasks running in every 5 sec.</message>
+    </log>
+</sequence>

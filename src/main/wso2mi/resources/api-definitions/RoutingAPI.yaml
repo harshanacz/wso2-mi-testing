@@ -1,0 +1,27 @@
+openapi: 3.0.1
+info:
+  title: RoutingAPI
+  description: API Definition of RoutingAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/routing
+- url: https://localhost:8253/routing
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response
+  /{country}:
+    get:
+      parameters:
+      - name: country
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

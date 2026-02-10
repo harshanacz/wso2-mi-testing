@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/routing" name="RoutingAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+    <resource methods="GET" uri-template="/{country}">
+        <inSequence>
+            <switch description="O" source="${country}">
+                <case regex="USA">
+                    <payloadFactory media-type="json" template-type="default">
+                        <format>welcome to USA</format>
+                    </payloadFactory>
+                    <respond/>
+                </case>
+                <default>
+                    <payloadFactory media-type="json" template-type="default">
+                        <format>not usa.... not allowed</format>
+                    </payloadFactory>
+                    <respond/>
+                </default>
+            </switch>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>
