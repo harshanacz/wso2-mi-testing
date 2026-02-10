@@ -1,0 +1,10 @@
+---
+key: "ChainingAPI-1.0.0"
+name : "ChainingAPI"
+displayName : "ChainingAPI"
+description: "ChainingAPI"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/chain"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
