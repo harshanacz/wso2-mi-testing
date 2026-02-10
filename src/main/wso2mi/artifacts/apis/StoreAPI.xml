@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/store" name="StoreAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+            <store messageStore="MyStore"/>
+            <payloadFactory media-type="json" template-type="default">
+                <format>{"status": "Message Saved! We will process it shortly."}</format>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>
