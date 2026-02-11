@@ -1,0 +1,26 @@
+<unit-test>
+    <artifacts>
+        <test-artifact>
+            <artifact>src/main/wso2mi/artifacts/apis/HelloWorldAPI.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+        </supportive-artifacts>
+        <registry-resources>
+        </registry-resources>
+        <connector-resources>
+        </connector-resources>
+    </artifacts>
+    <test-cases>
+        <test-case name="testcase1">
+            <input>
+                <request-path>/</request-path>
+                <request-method>GET</request-method>
+                <request-protocol>http</request-protocol>
+            </input>
+            <assertions>
+            </assertions>
+        </test-case>
+    </test-cases>
+    <mock-services>
+    </mock-services>
+</unit-test>
