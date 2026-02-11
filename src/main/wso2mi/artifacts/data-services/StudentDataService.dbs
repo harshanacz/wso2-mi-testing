@@ -1,0 +1,7 @@
+<data name="StudentDataService" serviceNamespace="" serviceGroup="" transports="http https" disableStreaming="true">
+    <description/>
+    <config id="StudentDB">
+        <property name="driverClassName">com.mysql.jdbc.Driver</property>
+        <property name="url">jdbc:mysql://[HOST]:[PORT]/[DATABASE]</property>
+    </config>
+</data>
